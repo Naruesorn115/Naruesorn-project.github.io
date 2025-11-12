@@ -6,55 +6,111 @@
     <title>Naruesorn115 | GitHub.io Portfolio</title>
     
     <style>
+       
+        :root {
+            --primary-color: #007bff; 
+            --secondary-color: #0366d6; 
+            --bg-light: #f8f9fa; 
+            --text-dark: #212529;
+            --text-muted: #6c757d; 
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--bg-light); 
+            color: var(--text-dark);
         }
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 40px auto; 
             background: #fff;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px; 
         }
         header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ddd;
+            padding-bottom: 25px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color); 
         }
         header h1 {
-            color: #0366d6; 
+            color: var(--secondary-color); 
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        header p {
+            color: var(--text-muted);
         }
         section {
-            padding: 20px 0;
-            border-bottom: 1px dashed #eee;
+            padding: 30px 0;
+            border-bottom: 1px solid #e9ecef; 
+        }
+        
+        section:last-of-type {
+            border-bottom: none;
         }
         h2 {
-            color: #24292e;
-            border-bottom: 2px solid #0366d6;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color); 
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        h3 {
+             color: var(--secondary-color);
         }
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border: 4px solid var(--primary-color); 
+            transition: transform 0.3s;
+        }
+        .profile-img:hover {
+            transform: scale(1.05); 
         }
         ul {
-            list-style: disc;
-            margin-left: 20px;
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        ul li::before {
+            content: '🔹'; 
+            color: var(--primary-color);
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
         }
         .project-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-left: 5px solid #0366d6;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f1f7ff; 
+            border: 1px solid #dee2e6;
+            border-left: 5px solid var(--primary-color); 
+            border-radius: 4px;
+        }
+        .project-item h4 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -65,39 +121,71 @@
         <header>
             <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-1/509364605_1774064116839909_4020097471911542166_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeFWQGdf6tzguDhyOnSji-oDXEJ_WvhukbxcQn9a-G6RvKQev94FCnP_4wad8nfyxi6fjSFHmCxVqIfMadMz6KU_&_nc_ohc=2Z5uaf7x8XwQ7kNvwFqU7db&_nc_oc=Adn1o5Jjk4P-oUU6VuYewKOFx2yrzeyjVZjf8MFtunDfwhq3KWnkkR5P2mEGWmCmegI&_nc_zt=24&_nc_ht=scontent-bkk1-2.xx&_nc_gid=hyW71kKXVGOR19C4DiGqqA&oh=00_Afg356AaGZp6pDLftdfoFBDs2tWlV_QuykRqDP4E3Du6Bg&oe=6919E2AC" alt="รูปโปรไฟล์" class="profile-img"> 
             <h1>Naruesorn Wichit</h1>
-            <p>นักศึกษาชั้นปีที่ 2 - สาขาคอมพิวเตอร์</p>
-            <p><strong>ความสนใจพิเศษ:</strong> AI, Web Development</p>
+            <p>นักศึกษาชั้นปีที่ 2 - สาขาวิทยาการคอมพิวเตอร์</p>
+            <p><strong>ความสนใจพิเศษ:</strong> AI, Web Development, Data Science</p>
         </header>
 
+        ---
+        
         <section id="skills">
             <h2>2. ทักษะ (Skills)</h2>
             <h3>Hard Skills:</h3>
             <ul>
-                <li><strong>Programming:</strong> Python,HTML/CSS,C</li>
+                <li><strong>Programming:</strong> Python, HTML/CSS, C</li>
                 <li><strong>AI & Data:</strong> TensorFlow, scikit-learn, Power BI, SQL</li>
                 <li><strong>Tools:</strong> Git, VS Code, Figma, Google Colab</li>
             </ul>
             <h3>Soft Skills:</h3>
             <ul>
-                <li>การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา ,</li>
+                <li>การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
             </ul>
         </section>
 
+        ---
+
+        <section id="projects">
+            <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
+            <div class="project-item">
+                <h4>[ชื่อโครงการ] - ระบบจองห้องประชุมออนไลน์ (Web Project)</h4>
+                <p><strong>รายละเอียด:</strong> พัฒนาระบบจองห้องประชุมแบบง่าย โดยใช้ HTML, CSS และ [ใส่ภาษา/เฟรมเวิร์กอื่นๆ] เพื่อฝึกทักษะ Web Development</p>
+                <p><strong>ลิงก์:</strong> <a href="[ใส่ลิงก์ GitHub Repo ของโปรเจกต์นี้]">GitHub Repository</a> | <a href="[ใส่ลิงก์ Demo ถ้ามี]">Demo / ภาพ Screenshot</a></p>
+            </div>
+            <div class="project-item">
+                <h4>[ชื่อโครงงาน] - AI ทำนายโรค (Data Project)</h4>
+                <p><strong>รายละเอียด:</strong> ใช้ Python และไลบรารี Scikit-learn ในการสร้างโมเดล Machine Learning เพื่อทำนาย [โรคที่ทำนาย] จากชุดข้อมูล [ชื่อชุดข้อมูล]</p>
+                <p><strong>ลิงก์:</strong> <a href="[ใส่ลิงก์ GitHub Repo ของโปรเจกต์นี้]">GitHub Repository</a></p>
+            </div>
+        </section>
+
+        ---
 
         <section id="education">
             <h2>4. การศึกษา (Education)</h2>
-            <p><strong>คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์</strong></p>
+            <p><strong>ปริญญาตรี คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์</strong></p>
             <p>มหาวิทยาลัยราชภัฏอุดรธานี - 2567 ถึงปัจจุบัน</p>
         </section>
+
+        ---
         
-       
+        <section id="achievements">
+            <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+            <ul>
+                <li>ผู้เข้าร่วมอบรม "AI for Beginners by Microsoft" (ออนไลน์ / [เดือน ปี])</li>
+                <li>เข้าร่วมแข่งขัน UDRU Hackathon 2025 (หากเข้าร่วมจริง)</li>
+                <li>ได้รับรางวัลชนะเลิศโครงงานด้าน IoT [ชื่องาน] (หากได้รับจริง)</li>
+            </ul>
+        </section>
+
+        ---
 
         <section id="contact">
             <h2>6. ติดต่อ (Contact)</h2>
             <p><strong>Email:</strong> <a href="mailto:nakoss4399@gmail.com">nakoss4399@gmail.com</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Naruesorn115/Naruesorn-project.github.io">github.com/Naruesorn115</a></p>
-            <p>จ.บึงกาฬ อ.ศรีวิไล</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Naruesorn115">github.com/Naruesorn115</a></p>
+            <p><strong>ที่อยู่ (โดยประมาณ):</strong> จ.บึงกาฬ</p>
         </section>
+
+        ---
 
         <section id="career-interest">
             <h2>7. องค์ประกอบเสริม (Career Interest)</h2>
